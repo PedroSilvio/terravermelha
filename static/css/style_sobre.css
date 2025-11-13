@@ -1,0 +1,360 @@
+/* Reset e configurações gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Ajuste para html e body ocuparem 100% da altura */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Corpo como flex container vertical */
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container principal que cresce para ocupar o espaço entre header e footer */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra de navegação */
+.barra {
+  background-color: #b41f3a; /* Vermelho terra */
+  padding: 15px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  border-radius: 25px;
+  z-index: 100;
+}
+
+/* Cabeçalho da página Sobre */
+.header-sobre {
+  text-align: center;
+  padding: 60px 0 40px;
+  background: linear-gradient(rgba(139, 0, 0, 0.8), rgba(139, 0, 0, 0.9)), url('fundo-sobre.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin-bottom: 40px;
+  border-radius: 0 0 10px 10px;
+}
+
+.header-sobre h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* Conteúdo principal */
+.conteudo-sobre {
+  padding-bottom: 40px;
+}
+
+.secao {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.secao:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.secao h2 { 
+  color: #b41f3a;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  border-left: 4px solid #FFD700;
+  padding-left: 15px;
+}
+
+.secao p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.botao-sobre {
+  display: inline-block;
+  background-color: #b41f3a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.botao-sobre:hover {
+  background-color: #8B0000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .barra {
+      flex-direction: column;
+      padding: 15px;
+  }
+  
+  .barra a {
+      margin: 5px 10px;
+  }
+  
+  .header-sobre {
+      padding: 40px 20px;
+  }
+  
+  .header-sobre h1 {
+      font-size: 2rem;
+  }
+  
+  .subtitulo {
+      font-size: 1rem;
+  }
+  
+  .secao {
+      padding: 20px;
+  }
+  
+  .secao h2 {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .barra {
+      flex-wrap: wrap;
+  }
+  
+  .barra a {
+      font-size: 0.9rem;
+      margin: 3px 5px;
+  }
+  
+  .header-sobre h1 {
+      font-size: 1.7rem;
+  }
+  
+  .secao {
+      padding: 15px;
+  }
+}
+
+.barra a.contato {
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+    text-decoration: none;
+    color: #fff; 
+    font-weight: bold;
+}
+
+.icone-contato {
+    width: 20px;   
+    height: 20px;
+}
+
+.topo {
+  background-color: #a31b2d;
+  border-radius: 50px;
+  margin: 20px 40px;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.menu li {
+  border-right: 2px solid white;
+  padding-right: 40px;
+}
+
+.menu li:last-child {
+  border-right: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 13px;
+  font-family: 'horizon';
+}
+
+.menu a:hover,
+.menu a.ativo {
+  text-decoration: none;
+}
+
+/* Contato */
+.contato {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.contato a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo img {
+  height: 50px;       /* altura da logo */
+  border-radius: 10px; /* opcional, deixa levemente arredondada */
+}
+
+.icone-contato {
+  width: 22px;   /* tamanho do ícone */
+  height: 22px;
+}
+
+.home:hover {
+  background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+.ativo:hover{
+background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px;
+}
+.disciplinas:hover{
+background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px;
+}
+.conteudos:hover{
+background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px;
+}
+.alunos:hover{
+background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px;
+}
+.ranking:hover{
+background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px
+}
+.sobre:hover{
+background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px
+}
+.telefone:hover{
+background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: 'horizon';
+  src: url('horizon.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.intro {
+  text-align: center;
+  margin: 60px auto 40px;
+  max-width: 700px;
+}
+
+.intro h2 {
+  color: #b3212a;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Rodapé ajustado para ficar no fim da página */
+.rodape {
+  background-color: #b41f3a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto; /* ESSA LINHA FAZ O RODAPÉ FICAR NO FINAL */
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto 10px;
+}
+
+.footer-logo {
+  width: 130px;
+}
+
+.contatos p {
+  margin: 5px 0;
+}
+
+.direitos {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.4);
+  padding-top: 10px;
+}

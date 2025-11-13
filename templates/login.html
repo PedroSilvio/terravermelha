@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Terra Vermelha</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+<body>
+  <!-- Faixa branca de fundo da barra -->
+  <div class="faixa-branca">
+    <header class="topo">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="../static/img/logo.jpg" alt="Logo da instituição">
+        </div>
+        <ul class="menu">
+          <li><a href="/" class="home">Home</a></li>
+          <li><a href="/cursos" class="ativo">Cursos</a></li>
+          <li><a href="/login" class="alunos">Login</a></li>
+          <li><a href="/sobre" class="sobre">Sobre</a></li>
+        </ul>
+        <div class="contato">
+          <img src="../static/img/telefone.png" alt="Ícone de contato" class="icone-contato">
+          <a href="#" class="telefone">Contato</a>
+        </div>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Área principal -->
+  <div class="container">
+      <div class="login-box">
+          <h1>LOGIN</h1>
+
+          <!-- Exibe mensagens Flask -->
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="flash {{ category }}">{{ message }}</div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+
+          <!-- Formulário de login -->
+          <form action="/login" method="POST">
+              <label for="email">Email</label>
+              <div class="input-box">
+                  <input type="text" id="email" name="email" placeholder="Digite seu email" required>
+              </div>
+
+              <label for="senha">Senha</label>
+              <div class="input-box">
+                  <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+              </div>
+
+              <a href="#" class="forgot">Esqueceu sua senha?</a>
+
+              <button type="submit" class="btn-login">Entrar</button>
+          </form>
+
+          <div class="register">
+              <p>Ainda não tem conta? <a href="/usuarios">Cadastre-se</a></p>
+          </div>
+      </div>
+  </div>
+</body>
+</html>

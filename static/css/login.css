@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'horizon';
+  src: url('horizon.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #b21f35;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Faixa branca atrás da barra */
+.faixa-branca {
+  background-color: #fff;
+  padding: 45px 0; /* aumentei um pouco a faixa branca */
+}
+
+/* Barra de navegação */
+.topo {
+  background-color: #a31b2d;
+  border-radius: 50px;
+  margin: 0 auto;
+  width: 88%;
+  color: white;
+  padding: 25px 80px; /* aumentei o padding para mais respiro */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 55px;
+  border-radius: 10px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 55px;
+}
+
+.menu li {
+  border-right: 2px solid white;
+  padding-right: 55px;
+}
+
+.menu li:last-child {
+  border-right: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 13px;
+  font-family: 'horizon';
+}
+
+/* Contato */
+.contato {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.contato a {
+  text-decoration: none;
+  color: white;
+}
+
+.icone-contato {
+  width: 22px;
+  height: 22px;
+}
+
+/* Hover */
+.menu a:hover,
+.telefone:hover {
+  background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 15px;
+}
+
+/* Container do login */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  margin-top: 100px;
+  padding: 0 80px;
+}
+
+/* Card do login */
+.login-box {
+  background-color: #fff;
+  padding: 70px 80px; /* aumentei o espaçamento interno */
+  border-radius: 25px;
+  width: 520px; /* aumentei o tamanho */
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.login-box h1 {
+  margin-bottom: 35px;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+/* Campos */
+label {
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+}
+
+.forgot {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  color: #3366ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Botão */
+.btn-login {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px;
+  background-color: #a31b2d;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn-login:hover {
+  background-color: #8d1827;
+}
+
+/* Cadastro */
+.register {
+  margin-top: 30px;
+  font-size: 15px;
+  color: #777;
+}
+
+.register a {
+  color: #555;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 1000px) {
+  .menu {
+    gap: 20px;
+  }
+  .menu li {
+    border-right: none;
+    padding-right: 0;
+  }
+  .topo {
+    width: 95%;
+    padding: 20px 30px;
+  }
+  .container {
+    margin-top: 60px;
+    padding: 0 25px;
+  }
+  .login-box {
+    width: 100%;
+    padding: 45px 35px;
+  }
+}

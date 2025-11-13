@@ -1,0 +1,10 @@
+id,nome,email,senha,perfil
+1,Pedro Silvio Fenilli Bombarda,21749872149@gmail.com,1234,
+2,Gustavo Oliva,gustavo.oliva@escola.pr.gov.br,123,outro
+3,Sec Test,sec@test.com,sec123,secretaria
+4,Teste Aluno,teste.aluno@example.com,aluno123,aluno
+5,Pedro,pedro@gmail.com,12345,secretaria
+6,Pedro,pedroo@gmail.com,123,secretaria
+7,Pedro,pedrooo@gmail.com,123,professor
+8,Pedro,pedroooo@gmail.com,123,aluno
+9,Pedro,pedrooooo@gmail.com,123,empresa

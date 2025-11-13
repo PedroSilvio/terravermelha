@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ranking.css') }}">
+</head>
+<body>
+
+    <!-- Barra de navegação -->
+    <header class="topo">
+        <nav class="navbar">
+          <div class="logo">
+            <img src="../static/img/logo.jpg" alt="Logo da instituição">
+          </div>
+          <ul class="menu">
+            <li><a href="/" class="home">Home</a></li>
+            <li><a href="/ranking_disciplina">Conteúdo</a></li>
+            <li><a href="/ranking">Nota</a></li>
+
+          </ul>
+          <div class="contato">
+            <img src="../static/img/telefone.png" alt="Ícone de contato" class="icone-contato">
+            <a href="#" class="telefone">Contato</a>
+          </div>
+        </nav>
+      </header>
+
+    <main class="container">
+        <h1 class="titulo-formulario">Ranking</h1>
+
+    <form method="POST">
+        <label for="id_conteudo">Id do Conteudo</label>
+        <select id="id_conteudo" name="id_conteudo" required>
+            <option value="">Selecione</option>
+            {% for c in conteudos %}
+               <option value="{{c.id}}">{{c.titulo}}</option>
+            {% endfor %}   
+        </select>        
+        <label for="id_aluno">Id do Aluno</label>
+        <select id="id_aluno" name="id_aluno" required>
+            <option value="">Selecione</option>
+            {% for a in alunos %}
+               <option value="{{a.id}}">{{a.nome}}</option>
+            {% endfor %}   
+        </select>
+          
+        <label for="pontuacao">Pontuação</label>
+        <input type="number" id="pontuacao" name="pontuacao" min="1" required />
+
+  
+          <button type="submit">Cadastrar</button>
+
+        </form>
+        <h2>Lista de Ranking</h2>
+        <table border="1">
+          <tr>
+            <th>ID</th><th>Id do Conteudo</th><th>Id do Aluno</th><th>Pontuação</th>
+          </tr>
+          {% for a in registros %}
+          <tr>
+            <td>{{ a.id }}</td><td>{{ a.id_conteudo }}</td><td>{{ a.id_aluno }}</td><td>{{ a.pontuacao }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+    </main>
+</body>
+</html>

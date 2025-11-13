@@ -1,0 +1,165 @@
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+  }
+
+  /* Cabeçalho */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #b41f3a;
+    color: white;
+    padding: 15px 30px;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .perfil {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+  }
+
+  /* Área principal */
+  .curso-container {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    align-items: center;
+  }
+
+  .video {
+    background: #222;
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+  }
+
+  .info h2 {
+    margin: 0 0 10px;
+  }
+
+  .progresso {
+    background: #ddd;
+    border-radius: 10px;
+    height: 12px;
+    margin: 10px 0;
+    width: 200px;
+  }
+
+  .barra {
+    background: #d17b0f;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .botoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .btn {
+    background: #d17b0f;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .btn:hover {
+    background: #a85c07;
+  }
+
+  /* Conteúdos */
+  .conteudos {
+    background: #b41f3a;
+    color: white;
+    padding: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .topico {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 15px 0;
+  }
+
+  .topico-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .topico-header .texto {
+    flex: 1;
+    margin-left: 15px;
+  }
+
+  .numero {
+    background: #d17b0f;
+    color: white;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-weight: bold;
+  }
+
+  .seta {
+    font-size: 20px;
+    transition: transform 0.3s;
+  }
+
+  .topico.ativo .seta {
+    transform: rotate(180deg);
+  }
+
+  .aulas {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+  }
+
+  .topico.ativo .aulas {
+    max-height: 500px; /* altura suficiente para caber as aulas */
+    opacity: 1;
+    margin-top: 15px;
+  }
+
+
+  .aula {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .miniatura {
+    background: #222;
+    width: 120px;
+    height: 80px;
+    border-radius: 6px;
+  }
+
+  .status {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #888;
+  }
+
+  .status.concluido {
+    background: #0f0;
+  }

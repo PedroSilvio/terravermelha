@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Novo usuário</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+</head>
+
+<body>
+    <!-- Barra do topo com a logo -->
+  <!-- Barra de navegação --> 
+  <header class="topo">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../static/img/logo.jpg" alt="Logo da instituição">
+      </div>
+      <ul class="menu">
+        <li><a href="/" class="home">Home</a></li>
+        <li><a href="/cursos" class="ativo">Cursos</a></li>
+        <li><a href="/alunos" class="alunos">Login</a></li>
+        <li><a href="/sobre" class="sobre">Sobre</a></li>
+      </ul>
+      <div class="contato">
+        <img src="../static/img/telefone.png" alt="Ícone de contato" class="icone-contato">
+        <a href="#" class="telefone">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+
+    <!-- Container principal -->
+    <main class="container">
+        <h1 class="titulo-formulario">Cadastre-se</h1>
+
+        <form method="POST">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required />
+
+            <label for="nome">Nome de Usuário</label>
+            <input type="text" id="nome_usuario" name="nome_usuario" required />
+
+    
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <div class="senha-container">
+                <div>
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required />
+                </div>
+
+                <div>
+                    <label for="repetir_senha">Repetir senha</label>
+                    <input type="password" id="repetir_senha" name="repetir_senha" required />
+                </div>
+            </div>
+
+            </select>
+
+            <label for="perfil">Perfil</label>
+            <select id="perfil" name="perfil" required>
+                <option value="">Selecione</option>
+                <option value="masculino">Secretaria</option>
+                <option value="feminino">Professor</option>
+                <option value="outro">Aluno</option>
+                <option value="empresa">Empresa</option>
+            </select>
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+        <h2>Lista de Usuarios</h2>
+        <table border="1">
+          <tr>
+            <th>ID</th><th>Nome</th><th>Usuário</th><th>Curso</th><th>Data</th>
+          </tr>
+          {% for a in registros %}
+          <tr>
+            <td>{{ a.id }}</td><td>{{ a.nome }}</td><td>{{ a.usuario.html }}</td><td>{{ a.curso_id }}</td><td>{{ a.data_registro }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+    </main>
+</body>
+
+</html>

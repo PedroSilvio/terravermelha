@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conteudo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/conteudos.css') }}">
+</head>
+<body id="conteudos">
+
+          <!-- Barra de navegação -->
+          <header class="topo">
+            <nav class="navbar">
+              <div class="logo">
+                <img src="../static/img/logo.jpg" alt="Logo da instituição">
+              </div>
+              <ul class="menu">
+                <li><a href="/" class="home">Home</a></li>
+                <li><a href="/ranking_disciplina">Conteúdo</a></li>
+                <li><a href="/ranking">Nota</a></li>
+                <li><a href="/sobre" class="sobre">Sobre</a></li>
+              </ul>
+              <div class="contato">
+                <img src="../static/img/telefone.png" alt="Ícone de contato" class="icone-contato">
+                <a href="#" class="telefone">Contato</a>
+              </div>
+            </nav>
+          </header>
+
+  <main class="container">
+    <h1 class="titulo-formulario">Conteúdos</h1>
+
+    <form method="POST">
+    
+      <label for="titulo">Título da aula</label>
+      <input type="text" id="titulo" name="titulo" required />
+
+
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+      <label for="material_apoio">Material de apoio</label>
+      <input type="url" id="material_apoio" name="material_apoio" required />
+  
+      <label for="video">Vídeo</label>
+      <input type="url" id="video" name="video" required />
+        
+      <label for="atividade">Atividade</label>
+      <input type="url" id="atividade" name="atividade" required />
+
+      <label for="id_disciplina">Disciplina</label>
+      <select id="id_disciplina" name="id_disciplina" required>
+          <option value="">Selecione</option>
+          {% for d in disciplinas %}
+             <option value="{{d.id}}">{{d.nome_materia}}</option>
+          {% endfor %}   
+      </select>           
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Lista de Conteúdos</h2>
+    <table border="1">
+      <tr>
+        <th>ID</th><th>Material de Apoio</th><th>Descrição</th><th>Vídeo</th><th>Id da Disciplina</th><th>Atividade</th>
+      </tr>
+      {% for a in registros %}
+      <tr>
+        <td>{{ a.id }}</td><td>{{ a.material_apoio }}</td><td>{{ a.descricao }}</td><td>{{ a.video }}</td><td>{{ a.id_disciplina }}</td><td>{{ a.atividade }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+</body>
+</html>

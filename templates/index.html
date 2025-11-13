@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos Técnicos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_index.css') }}">
+</head>
+<body id="index">
+
+<header class="topo">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../static/img/logo.jpg" alt="Logo da instituição">
+      </div>
+      <ul class="menu">
+        <li><a href="/" class="home">Home</a></li>
+        <li><a href="/cursos" class="ativo">Cursos</a></li>
+        <li><a href="/alunos" class="alunos">Login</a></li>
+        <li><a href="/sobre" class="sobre">Sobre</a></li>
+      </ul>
+      <div class="contato">
+        <img src="../static/img/telefone.png" alt="Ícone de contato" class="icone-contato">
+        <a href="#" class="telefone">Contato</a>
+      </div>
+    </nav>
+  </header>
+  
+
+  <!-- Conteúdo principal -->
+  <main class="principal">
+      <div class="texto">
+          <h1>TRANSFORME SUA CARREIRA COM CURSOS TÉCNICOS <br> DE QUALIDADE.</h1>
+          <p>
+             O Terra Vermelha é um projeto dedicado a transformar vidas por meio da educação técnica de qualidade.
+              Com uma abordagem prática e focada nas necessidades do mercado de trabalho, oferecemos cursos técnicos atualizados que preparam nossos alunos para enfrentar os desafios da tecnologia e da inovação.
+          </p>
+          <p>
+              Nosso compromisso é proporcionar um ensino acessível, dinâmico e de excelência, com uma metodologia que combina teoria e prática, para garantir que nossos alunos se destaquem em suas carreiras. Seja para dar o primeiro passo em uma nova profissão ou para aprimorar suas habilidades.
+          </p>
+          <div class="botoes">
+              <a href="/login" class="btn1">Login</a>
+              <a href="/usuarios" class="btn2">Cadastre-se</a>
+         
+          </div>
+      </div>    
+
+      <div class="imagem">
+          <img src="../static/img/asyghroni-ekpaideusi-kataskevi-istoselidon.jpg" alt="Estudando online">
+      </div>
+  </main>
+</body>
+</html>

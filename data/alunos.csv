@@ -1,0 +1,8 @@
+id,nome,cpf,data_nascimento,telefone,email,senha,repetir_senha,genero,curso_id,data_registro
+1,mario ricardo guadagnin,45678912315,1964-01-26,4899996634,gustavo.oliva@escola.pr.gov.br,mrg,mrg,masculino,1,23/10/2025 14:27:49
+2,mario ricardo guadagnin,45678912315,1964-01-26,4899996634,gustavo.oliva@escola.pr.gov.br,1234,1111,feminino,3,23/10/2025 15:21:01
+3,Maria Desan,466755678,2009-05-05,4196443000,gustavo.oliva@escola.pr.gov.br,1234,1234,feminino,3,24/10/2025 09:00:45
+4,bruno e yohan,rydsyw2235y4,1963-12-01,31442526543735635,gustavo.oliva@escola.pr.gov.br,1234,1234,outro,4,24/10/2025 14:05:34
+5,MatheusHen,11552092909,2010-01-13,44999409839,matheus.barbosa13@escola.pr.gov.br,Mat13012010,masculino,2,03/11/2025 08:35:20
+6,Teste Aluno,
+7,Pedro,

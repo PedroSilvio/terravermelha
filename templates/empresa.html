@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área da Empresa - Terra Vermelha</title>
+    <link rel="stylesheet" href="../static/css/style_index.css">
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <header class="topo">
+        <nav class="navbar">
+          <div class="logo">
+            <img src="../static/img/logo.jpg" alt="Logo da instituição">
+          </div>
+          <ul class="menu">
+            <li><a href="/" class="home">Home</a></li>
+            <li><a href="/ranking_disciplina">Ranking Disciplina</a></li>
+            <li><a href="/ranking">Ranking Curso</a></li>
+            <li><a href="/logout" class="login">Sair</a></li>
+          </ul>
+          <div class="contato">
+            <img src="../static/img/telefone.png" alt="Ícone de contato" class="icone-contato">
+            <a href="#" class="telefone">Contato</a>
+          </div>
+        </nav>
+      </header>
+
+    <!-- Conteúdo principal -->
+    <main class="principal">
+        <div class="texto">
+            <h1>ENCONTRE OS MELHORES TALENTOS DO TERRA VERMELHA</h1>
+            <p>
+                Acompanhe o desempenho dos alunos e descubra quais profissionais estão se destacando
+                nos cursos técnicos do nosso portal educacional.
+            </p>
+            <p>
+                Aqui você pode visualizar o ranking por curso ou disciplina e identificar
+                os alunos mais promissores para futuras oportunidades de estágio ou contratação.
+            </p>
+
+            <div class="botoes">
+                <a href="/ranking" class="btn1"> Ver Ranking de Cursos</a>
+                <a href="/ranking_disciplina" class="btn2"> Ver Ranking de Disciplinas</a>
+            </div>
+        </div>
+
+        <div class="imagem">
+            <img src="../static/img/empresa_talentos.jpg" alt="Empresário analisando dados">
+        </div>
+    </main>
+
+    {% if ranking_geral %}
+    <section style="padding: 40px 80px;">
+        <h2 style="font-family: 'horizon'; color:#a31b2d; margin-bottom:15px;">Ranking Selecionado</h2>
+        <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse:collapse;">
+            <tr style="background:#a31b2d; color:white;">
+                <th>Posição</th>
+                <th>Aluno</th>
+                <th>Pontuação</th>
+            </tr>
+            {% for nome, nota in ranking_geral %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ nome }}</td>
+                <td>{{ nota }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+    {% endif %}
+</body>
+</html>

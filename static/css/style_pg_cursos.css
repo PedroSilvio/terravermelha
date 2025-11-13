@@ -1,0 +1,214 @@
+@font-face {
+  font-family: 'ArchivoBlack';
+  src: url('ArchivoBlack-Regular.ttf') format('opentype');
+}
+
+body {
+  font-family: "Archivo Black", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 40px;
+  margin: 30px auto;
+  max-width: 1200px; 
+}
+
+.caixa-curso {
+  background: #b51f36;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  width: 460px;
+  height: 180px;
+}
+
+.caixa-imagem {
+  background: white;
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  margin-right: 20px;
+}
+
+.caixa-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.caixa-texto h2 {
+  margin: 0;
+  font-size: 20px;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.caixa-texto p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.etiqueta {
+    border: 2px solid #d17b0f;
+    padding: 4px 10px;
+    border-radius: 15px;
+    color: #d17b0f;
+    font-weight: bold;
+    font-size: 14px;
+    width: fit-content;
+    font-family: "Archivo Black", sans-serif;
+    align-self: flex-start; 
+    margin-top: 6px;
+}
+
+
+
+.botao:hover {
+  background: #a85c07;
+}
+
+
+.botao {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #d47909;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 36px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
+.topo {
+  background-color: #a31b2d;
+  border-radius: 50px;
+  margin: 20px 40px;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.menu li {
+  border-right: 2px solid white;
+  padding-right: 40px;
+}
+
+.menu li:last-child {
+  border-right: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 13px;
+  font-family: 'horizon';
+}
+
+.menu a:hover,
+.menu a.ativo {
+  text-decoration: none;
+
+}
+
+/* Contato */
+.contato {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.contato a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo img {
+  height: 50px;       /* altura da logo */
+  border-radius: 10px; /* opcional, deixa levemente arredondada */
+}
+
+.icone-contato {
+  width: 22px;   /* tamanho do ícone */
+  height: 22px;
+}
+
+.home:hover {
+  background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+.ativo:hover{
+background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px;
+}
+.disciplinas:hover{
+background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px;
+}
+.conteudos:hover{
+background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px;
+}
+.alunos:hover{
+background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px;
+}
+.ranking:hover{
+background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px
+}
+.sobre:hover{
+background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px
+}
+.telefone:hover{
+background: #d17b0f;
+  box-shadow: 0 0 0 5px #d17b0f;
+  border-radius: 2px;
+  font-size: 16px;
+}
